@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta CNPJ Profissional</title>
+    <!-- Ligação com o arquivo CSS externo -->
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Consulta de Empresa</h1>
+        
+        <!-- Aceita máscaras como 27.865.757/0001-02 -->
+        <input type="text" id="cnpjInput" placeholder="00.000.000/0000-00" maxlength="18">
+        
+        <button onclick="buscarCNPJ()">Consultar CNPJ</button>
+        
+        <!-- Local onde os resultados serão renderizados -->
+        <div id="resultado"></div>
+    </div>
+
+    <!-- Ligação com o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>

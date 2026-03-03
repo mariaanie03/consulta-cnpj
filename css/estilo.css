@@ -1,0 +1,175 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS E FUNDO (DEGRADÊ)
+   ========================================= */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    /* Degradê azul profundo e elegante */
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #334155;
+}
+
+/* Container Principal (Cartão Branco) */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 90%;
+    max-width: 550px;
+    margin: 20px;
+}
+
+h1 {
+    color: #1e3a8a; /* Azul marinho */
+    margin-bottom: 25px;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+/* =========================================
+   INPUTS E BOTÕES
+   ========================================= */
+input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    /* Degradê azul vibrante para o botão */
+    background: linear-gradient(to right, #2563eb, #3b82f6);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(to right, #1d4ed8, #2563eb);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* =========================================
+   ESTILO DA FICHA DE RESULTADOS (DOM)
+   ========================================= */
+#resultado {
+    margin-top: 30px;
+}
+
+.ficha-cadastral {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px;
+    position: relative;
+    text-align: left;
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Etiqueta de Situação Cadastral (Badge) */
+.badge-situacao {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #10b981; /* Verde sucesso */
+    color: white;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Rótulos e Valores */
+.label-info {
+    display: block;
+    font-size: 0.7rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.valor-titulo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.valor-texto {
+    font-size: 1rem;
+    color: #334155;
+    font-weight: 500;
+}
+
+/* Layout em Grid para Endereço */
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.coluna {
+    border-left: 3px solid #cbd5e1;
+    padding-left: 12px;
+}
+
+/* Responsividade: Em telas maiores que 480px, o endereço fica em colunas */
+@media (min-width: 480px) {
+    .grid-layout {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* =========================================
+   ANIMAÇÕES E ERROS
+   ========================================= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilo para Mensagens de Erro */
+.erro-container {
+    color: #ef4444;
+    background: #fef2f2;
+    border: 1px solid #fee2e2;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    animation: fadeIn 0.4s ease-in;
+}
